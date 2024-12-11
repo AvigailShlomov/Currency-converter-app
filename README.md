@@ -1,27 +1,72 @@
-# CurrencyConverter
+[# Project Title
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+Ewave Search Engine
+## Description
 
-## Development server
+Coralogix Currency Converter. 
+Client: Angular 18 and Angular Material
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+* This project features a currency converter with an input, and 2 currency dropdown to choose from (from/to).
+* Card with convertion result.
+* Responsive application.
+* Saves the history on refresh.
+* A chart that represents the currency rates over the past week.
+* SPA - 2 pages: Converter and History
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
+* Clone this repo.
+* npm i
+* ng s
+* redirect to  http://localhost:4200/ or other given route
 
-## Running unit tests
+### Dependencies
+* Visual Studio Code
+*  Angular 18
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Installing
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+### Executing program
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+* Open Currency Converter project in vs code
+* open terminal
+* npm i
+* ng s
+* redirect to  http://localhost:4200/ or other given route
+
+## Help
+
+Any advise for common problems or issues.
+```
+command to run if program contains helper info
+```
+
+## Authors
+Avigail Shlomov   
+054-7979-637
+
+## Version History
+
+* 0.2
+    * Various bug fixes and optimizations
+    * See [commit change]() or See [release history]()
+* 0.1
+    * Initial Release
+
+## License
+
+This project is licensed under the [Avigail_Shlomov] License - see the LICENSE.md file for details
+
+## Acknowledgments
+Google
+Github
+Youtube
+Medium.com
+StackOverflow
+...
+
+(https://github.com/AvigailShlomov/Currency-converter-app.git)
