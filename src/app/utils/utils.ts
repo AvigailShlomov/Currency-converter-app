@@ -5,7 +5,8 @@ export function lastWeekDate(): string {
   return formatDate(lastWeekDate);
 }
 
-function formatDate(date: Date): string {
+// convert Date to '01-01-2024' string format
+function formatDate(date: Date): string { 
   var d = new Date(date),
     month = '' + (d.getMonth() + 1),
     day = '' + d.getDate(),
@@ -17,7 +18,8 @@ function formatDate(date: Date): string {
   return [year, month, day].join('-');
 }
 
-export function convertStringToDate(date: string): Date {
+//convert from '01-01-2024' (string) to Date format
+export function convertStringToDate(date: string): Date { 
   const [year, month, day] = date.split('-').map(Number);
   return new Date(year, month - 1, day);
 }
