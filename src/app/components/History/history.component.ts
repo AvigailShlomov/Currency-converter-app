@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { ConversionForStorage } from '../../models/currency.models';
@@ -11,10 +11,10 @@ import { HistoryService } from '../../services/history.service';
   templateUrl: './history.component.html',
   styleUrl: './history.component.css',
 })
-export class HistoryComponent {
+export class HistoryComponent implements OnInit {
   conversionHistory: ConversionForStorage[] = [];
 
-  constructor(private historyService: HistoryService) {}
+  constructor(private historyService: HistoryService) { }
 
   ngOnInit() {
     this.initConversionFromLS();
