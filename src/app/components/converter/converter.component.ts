@@ -33,23 +33,24 @@ import { convertStringToDate } from '../../utils/utils';
   styleUrl: './converter.component.css',
 })
 export class ConverterComponent implements OnInit {
-  amount: number = 1;
-  fromCurrency: string = 'USD';
-  toCurrency: string = 'ILS';
-  result: number | null = null;
-  currencies: Currencies = {};
-  currDisplay: { key: string; value: string }[] = [];
-  chart: any;
-  chartXandYValues: { x: Date; y: number }[] = [];
-  chartOptions: any;
-  resultToCuur: string = 'ILS';
-  resultFromCuur: string = 'USD';
-  resultAmount: number = 1;
+  public currencies: Currencies = {};
+  public amount: number = 1;
+  public fromCurrency: string = 'USD';
+  public toCurrency: string = 'ILS';
+  public result: number | null = null;
+  public currDisplay: { key: string; value: string }[] = [];
+  public chart: any;
+  public chartOptions: any;
+  private chartXandYValues: { x: Date; y: number }[] = [];
+  public resultToCuur: string = 'ILS';
+  public resultFromCuur: string = 'USD';
+  public resultAmount: number = 1;
 
   constructor(
     private converterService: ConverterService,
     private historyService: HistoryService
-  ) {}
+  ) { }
+
 
   ngOnInit() {
     this.getAllCurrencies();

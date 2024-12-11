@@ -15,13 +15,13 @@ import {
 export class ConverterService {
   private baseUrl = BASE_API;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getAllCurrencies(): Observable<Currencies> {
     return this.http.get<Currencies>(`${this.baseUrl}/currencies`);
   }
 
-  getConvertCurrency(
+  public getConvertCurrency(
     from: string,
     to: string,
     amount: number
@@ -31,7 +31,7 @@ export class ConverterService {
     );
   }
 
-  getHistoricalRates(
+  public getHistoricalRates(
     fromCurr: string,
     toCurr: string
   ): Observable<HistoricalRates> {

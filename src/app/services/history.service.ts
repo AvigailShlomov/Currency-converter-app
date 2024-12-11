@@ -9,10 +9,8 @@ export class HistoryService {
   private stroage_key = STORAGE_KEY;
   private allStoredConversion: ConversionForStorage[] = [];
 
-  constructor() {
-  
-  }
-  getConversionsFromStorage(): ConversionForStorage[] {
+
+  public getConversionsFromStorage(): ConversionForStorage[] {
     if (typeof localStorage !== 'undefined') {
       const history = localStorage.getItem(this.stroage_key);
       if (history) {
@@ -25,7 +23,7 @@ export class HistoryService {
     return this.allStoredConversion;
   }
 
-  saveConvertionToStorage(newConversion: ConversionForStorage) {
+  public saveConvertionToStorage(newConversion: ConversionForStorage) {
     const history = this.getConversionsFromStorage();
     const allConversions = [newConversion, ...history];
     localStorage.setItem(this.stroage_key, JSON.stringify(allConversions))
