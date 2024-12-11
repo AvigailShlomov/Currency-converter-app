@@ -7,7 +7,7 @@ import { ConversionForStorage, STORAGE_KEY } from '../models/currency.models';
 export class HistoryService {
 
   private stroage_key = STORAGE_KEY;
-  allStoredConversion: ConversionForStorage[] = [];
+  private allStoredConversion: ConversionForStorage[] = [];
 
   constructor() {
   
