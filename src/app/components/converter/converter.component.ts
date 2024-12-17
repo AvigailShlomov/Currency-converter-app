@@ -40,7 +40,6 @@ export class ConverterComponent implements OnInit {
   public currDisplay: { key: string; value: string }[] = [];
   public chart: any;
   public chartOptions: any;
-  private chartXandYValues: { x: Date; y: number }[] = [];
   public resultToCuur: string = 'ILS';
   public resultFromCuur: string = 'USD';
   public resultAmount: number = 1;
@@ -94,12 +93,14 @@ export class ConverterComponent implements OnInit {
   }
 
   updateChart() {
+    let chartXandYValues: { x: Date; y: number }[] = [];
+
     this.converterService
       .getHistoricalRates(this.fromCurrency, this.toCurrency)
       .subscribe({
         next: (data) => {
           const dates = Object.keys(data.rates);
-          this.chartXandYValues = dates.map((date) => ({
+          chartXandYValues = dates.map((date) => ({
             x: convertStringToDate(date),
             y: data.rates[date][this.toCurrency],
           }));
@@ -129,12 +130,12 @@ export class ConverterComponent implements OnInit {
                   type: 'line',
                   xValueFormatString: 'YYYY-MM-DD',
                   yValueFormatString: '#,###.##',
-                  dataPoints: [...this.chartXandYValues],
+                  dataPoints: [...chartXandYValues],
                 },
               ],
             };
           } else {
-            this.chartOptions.data[0].dataPoints = [...this.chartXandYValues];
+            this.chartOptions.data[0].dataPoints = [...chartXandYValues];
           }
 
           if (this.chart) {
