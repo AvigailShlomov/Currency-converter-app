@@ -11,7 +11,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { ConverterService } from '../../services/converter.service';
 import { HistoryService } from '../../services/history.service';
-import { Currencies } from '../../models/currency.models';
 import { convertStringToDate } from '../../utils/utils';
 
 @Component({
@@ -34,7 +33,6 @@ import { convertStringToDate } from '../../utils/utils';
   styleUrl: './converter.component.css',
 })
 export class ConverterComponent implements OnInit {
-  public currencies: Currencies = {};
   public amount: number = 1;
   public fromCurrency: string = 'USD';
   public toCurrency: string = 'ILS';
@@ -60,7 +58,6 @@ export class ConverterComponent implements OnInit {
   getAllCurrencies() {
     this.converterService.getAllCurrencies().subscribe({
       next: (currencies) => {
-        this.currencies = { ...currencies };
         this.currDisplay = Object.entries(currencies).map(([key, value]) => ({
           key,
           value,
