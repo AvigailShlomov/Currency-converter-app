@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
@@ -18,7 +18,8 @@ import { convertStringToDate } from '../../utils/utils';
   selector: 'app-converter',
   standalone: true,
   imports: [
-    CommonModule,
+    NgIf,
+    NgFor,
     FormsModule,
     MatCardModule,
     MatChipsModule,

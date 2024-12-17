@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { DatePipe, NgFor, NgIf } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { ConversionForStorage } from '../../models/currency.models';
 import { HistoryService } from '../../services/history.service';
@@ -7,7 +7,11 @@ import { HistoryService } from '../../services/history.service';
 @Component({
   selector: 'app-history',
   standalone: true,
-  imports: [CommonModule, MatCardModule],
+  imports: [
+    NgIf,
+    NgFor,
+    DatePipe,
+    MatCardModule],
   templateUrl: './history.component.html',
   styleUrl: './history.component.css',
 })
