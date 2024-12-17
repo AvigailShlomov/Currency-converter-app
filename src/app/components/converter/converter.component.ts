@@ -3,7 +3,6 @@ import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
-import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -21,7 +20,6 @@ import { convertStringToDate } from '../../utils/utils';
     NgFor,
     FormsModule,
     MatCardModule,
-    MatChipsModule,
     MatProgressBarModule,
     MatFormFieldModule,
     MatSelectModule,
