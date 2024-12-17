@@ -19,8 +19,8 @@ export interface ConversionForStorage {
 
 export interface HistoricalRates {
   base: string;
-  start_date: string;
-  end_date: string;
+  startDate: string;
+  endDate: string;
   rates: {
     [key: string]: {
       [currency: string]: number;
