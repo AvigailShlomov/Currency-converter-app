@@ -21,10 +21,11 @@ export interface HistoricalRates {
   endDate: string;
   rates: {
     [key: string]: {
-      [currency: string]: number;
+      [currency: string]: number; // maybe record as well , but ill lose the currency 
     };
   };
 }
 
 export const BASE_API = 'https://api.frankfurter.dev/v1';
-export const STORAGE_KEY = 'HistoryeKey';
+export const HISTORY_STORAGE_KEY = 'HistoryeKey';
+export const CURRENCIES_STORAGE_KEY = 'CurrenciesKey';

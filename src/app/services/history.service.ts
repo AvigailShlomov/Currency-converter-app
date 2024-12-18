@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { ConversionForStorage, STORAGE_KEY } from '../models/currency.models';
+import { ConversionForStorage, History_STORAGE_KEY } from '../models/currency.models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HistoryService {
 
-  private stroage_key = STORAGE_KEY;
+  private stroage_key = History_STORAGE_KEY;
   private allStoredConversion: ConversionForStorage[] = [];
 
 
