@@ -1,6 +1,4 @@
-export interface Currencies {
-  [key: string]: string;
-}
+export type Currencies= Record<string, string>;
 
 export interface ConverterResponse {
   amount: number;
@@ -29,4 +27,4 @@ export interface HistoricalRates {
 }
 
 export const BASE_API = 'https://api.frankfurter.dev/v1';
-export const STORAGE_KEY = 'https://api.frankfurter.dev/v1';
+export const STORAGE_KEY = 'History_Storage_Key';
