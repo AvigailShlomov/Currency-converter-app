@@ -20,7 +20,6 @@ import { convertStringToDate } from '../../utils/utils';
     NgFor,
     FormsModule,
     MatCardModule,
-    MatProgressBarModule,
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
