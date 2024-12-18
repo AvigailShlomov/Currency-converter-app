@@ -6,7 +6,7 @@ export interface ConverterResponse {
   amount: number;
   base: string;
   date: string;
-  rates: { [key: string]: number };
+  rates: Record<string, number>;
 }
 
 export interface ConversionForStorage {
