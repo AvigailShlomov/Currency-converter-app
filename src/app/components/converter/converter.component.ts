@@ -64,7 +64,10 @@ export class ConverterComponent implements OnInit {
   }
 
   convert() {
-    if (this.amount <= 0) return;
+    if (this.amount <= 0) {
+      console.log("Error! Amount is required when converting");
+      return;
+    }
 
     this.converterService
       .getConvertCurrency(this.fromCurrency, this.toCurrency, this.amount)
@@ -85,8 +88,6 @@ export class ConverterComponent implements OnInit {
         },
         error: (err) => alert('Error while fetching currency conversion'),
       });
-
-    return;
   }
 
   updateChart() {
