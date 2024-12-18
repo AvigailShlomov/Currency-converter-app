@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { lastWeekDate } from '../utils/utils';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import {
   BASE_API,
   ConverterResponse,
@@ -17,24 +16,17 @@ export class ConverterService {
 
   constructor(private http: HttpClient) { }
 
-  getAllCurrencies(): Observable<Currencies> {
+  getAllCurrencies() {
     return this.http.get<Currencies>(`${this.baseUrl}/currencies`);
   }
 
-  public getConvertCurrency(
-    from: string,
-    to: string,
-    amount: number
-  ): Observable<ConverterResponse> {
+  public getConvertCurrency(from: string, to: string, amount: number) {
     return this.http.get<ConverterResponse>(
       `${this.baseUrl}/latest?amount=${amount}&base=${from}&symbols=${to}`
     );
   }
 
-  public getHistoricalRates(
-    fromCurr: string,
-    toCurr: string
-  ): Observable<HistoricalRates> {
+  public getHistoricalRates(fromCurr: string, toCurr: string) {
     const dateFrom = lastWeekDate();
 
     return this.http.get<HistoricalRates>(
