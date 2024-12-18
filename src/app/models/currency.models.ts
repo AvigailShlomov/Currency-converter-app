@@ -27,4 +27,4 @@ export interface HistoricalRates {
 }
 
 export const BASE_API = 'https://api.frankfurter.dev/v1';
-export const STORAGE_KEY = 'History_Storage_Key';
+export const STORAGE_KEY = 'HistoryeKey';
