@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe, NgFor, NgIf } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { ConversionForStorage } from '../../models/currency.models';
+import { ConversionForStorage, HISTORY_STORAGE_KEY } from '../../models/currency.models';
 import { HistoryService } from '../../services/history.service';
 
 @Component({
@@ -25,6 +25,6 @@ export class HistoryComponent implements OnInit {
   }
 
   initConversionFromLS() {
-    this.conversionHistory = this.historyService.getConversionsFromStorage();
+    this.conversionHistory = this.historyService.getDataFromStorage<ConversionForStorage>(HISTORY_STORAGE_KEY);
   }
 }
