@@ -1,4 +1,6 @@
-export type Currencies= Record<string, string>;
+export interface Currencies { // export type Currencies= Record<string, string>;
+  [key: string]: string;
+}
 
 export interface ConverterResponse {
   amount: number;
