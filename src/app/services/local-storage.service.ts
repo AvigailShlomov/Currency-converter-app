@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class HistoryService {
+export class LocalStorageService {
 
   public getDataFromStorage<T>(key: string): T[] {
     if (typeof localStorage !== 'undefined') {

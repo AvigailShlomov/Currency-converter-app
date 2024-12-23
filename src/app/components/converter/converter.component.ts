@@ -8,7 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { ConverterService } from '../../services/converter.service';
-import { HistoryService } from '../../services/history.service';
+import { LocalStorageService } from '../../services/local-storage.service';
 import { convertStringToDate } from '../../utils/utils';
 import { Currencies, CURRENCIES_STORAGE_KEY, HISTORY_STORAGE_KEY } from '../../models/currency.models';
 
@@ -40,10 +40,10 @@ export class ConverterComponent implements OnInit {
   public resultToCuur: string = 'ILS';
   public resultFromCuur: string = 'USD';
   public resultAmount: number = 1;
-  
+
   constructor(
     private converterService: ConverterService,
-    private historyService: HistoryService
+    private historyService: LocalStorageService
   ) { }
 
 
