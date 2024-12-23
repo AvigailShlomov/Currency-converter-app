@@ -9,7 +9,7 @@ import {
 } from '../models/currency.models';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'any',
 })
 export class ConverterService {
   private baseUrl = BASE_API;
