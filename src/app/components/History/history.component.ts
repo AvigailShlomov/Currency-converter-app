@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { DatePipe, NgFor, NgIf } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { ConversionForStorage, HISTORY_STORAGE_KEY } from '../../models/currency.models';
@@ -14,6 +14,7 @@ import { LocalStorageService } from '../../services/local-storage.service';
     MatCardModule],
   templateUrl: './history.component.html',
   styleUrl: './history.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HistoryComponent implements OnInit {
   conversionHistory: ConversionForStorage[] = [];

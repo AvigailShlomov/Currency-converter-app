@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
@@ -28,18 +28,19 @@ import { Currencies, CURRENCIES_STORAGE_KEY, HISTORY_STORAGE_KEY } from '../../m
   ],
   templateUrl: './converter.component.html',
   styleUrl: './converter.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ConverterComponent implements OnInit {
-  public amount: number = 1;
-  public fromCurrency: string = 'USD';
-  public toCurrency: string = 'ILS';
-  public result: number | null = null;
-  public currDisplay: { key: string; value: string }[] = [];
-  public chart: any;
-  public chartOptions: any;
-  public resultToCuur: string = 'ILS';
-  public resultFromCuur: string = 'USD';
-  public resultAmount: number = 1;
+  amount: number = 1;
+  fromCurrency: string = 'USD';
+  toCurrency: string = 'ILS';
+  result: number | null = null;
+  currDisplay: { key: string; value: string }[] = [];
+  chart: any;
+  chartOptions: any;
+  resultToCuur: string = 'ILS';
+  resultFromCuur: string = 'USD';
+  resultAmount: number = 1;
 
   constructor(
     private converterService: ConverterService,
