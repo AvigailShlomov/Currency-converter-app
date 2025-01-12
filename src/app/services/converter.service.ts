@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { lastWeekDate } from '../utils/utils';
 import { HttpClient } from '@angular/common/http';
+import { lastWeekDate } from '../utils/utils';
 import {
   BASE_API,
   ConverterResponse,
