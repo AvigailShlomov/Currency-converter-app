@@ -6,7 +6,10 @@ import { Injectable } from '@angular/core';
 export class LocalStorageService {
 
   public getDataFromStorage<T>(key: string): T[] {
-    if (typeof localStorage !== 'undefined') {
+    /**@todo: 
+     * verify the comments
+     */
+   // if (typeof localStorage !== 'undefined') { 
       const dataFromStorage = localStorage.getItem(key);
       
       if (dataFromStorage) {
@@ -16,8 +19,8 @@ export class LocalStorageService {
         return [];
         // console.log("Local Storage is not supported");
       }
-    }
-    return [];
+//  }
+    //return [];
   }
 
   public saveDataToStorage<T>(key: string, newConversion: T) {
