@@ -7,7 +7,7 @@ export function lastWeekDate(): string {
 
 // convert Date to '01-01-2024' string format
 function formatDate(date: Date): string { 
-  var d = new Date(date),
+  let d = new Date(date),
     month = '' + (d.getMonth() + 1),
     day = '' + d.getDate(),
     year = d.getFullYear();
